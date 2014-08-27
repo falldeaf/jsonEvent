@@ -1,0 +1,26 @@
+body {
+  min-height: 2000px;
+  padding-top: 105px;
+}
+
+.navbar-header {
+	width:100%;
+}
+
+.asterisk {
+	visibility: hidden;
+}
+
+#placeholder {
+	height:500px;
+	width: 500px;
+	background-image:url(../img/falldeafobjecteditorlogo.png);
+}
+
+.well {
+	background-color: #BDB8B8;
+}
+
+#editor_holder div div.well div .well {
+	background-color: #FCFCFC;
+}

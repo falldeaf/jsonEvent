@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Falldeaf's TMX Object Editor</title>
+
+	<link class="themes" id="defaulttheme" href="css/bootstrap.min.css" rel="stylesheet">
+	<link class="themes" id="ameliatheme" href="css/bootstrap-amelia.min.css" rel="stylesheet">
+	<link class="themes" id="slatetheme" href="css/bootstrap-slate.min.css" rel="stylesheet">
+	<link class="themes" id="superherotheme" href="css/bootstrap-superhero.min.css" rel="stylesheet">
+	
+	<link href="css/objecteditor.css" rel="stylesheet">
+
+	<!-- <link rel="stylesheet" id="icon_stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"> -->
+</head>
+
+<body>
+	<input style="display:none;" type="file" id="files" name="files[]" multiple   accept=".tmx"/>
+	
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Falldeaf's Object Editor <span class="glyphicon glyphicon-gift"></span></a>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a id="openaction" href="#">Open <span class="glyphicon glyphicon-folder-open"></span></a>
+					</li>
+					<li><a id="saveaction" href="#">Save <span class="glyphicon glyphicon-floppy-save"></span></a>
+					</li>
+					<li class="dropdown">
+						<a href="#" data-toggle="dropdown" class="dropdown-toggle">theme <span class="glyphicon glyphicon-picture"></span> <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a class="themebuttons" id="default" href="#">Bootstrap 3</a>
+							</li>
+							<li><a class="themebuttons" id="amelia" href="#">Amelia</a>
+							</li>
+							<li><a class="themebuttons" id="slate" href="#">Slate</a>
+							</li>
+							<li><a class="themebuttons" id="superhero" href="#">Super Hero</a>
+							</li>
+						</ul>
+					</li>
+					<li><a id="setupaction" href="#">Schema <span class="glyphicon glyphicon-cog"></span></a>
+					</li>
+				</ul>
+
+
+			</div>
+
+			<ul id="filetabs" class="nav nav-tabs" role="tablist">
+				<!-- <li class="active"><a href="#">level1.tmx *</a>
+                </li>
+                <li><a href="#">level2.tmx</a>
+                </li>
+                <li><a href="#">level3.tmx</a>
+                </li> -->
+			</ul>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3 hidden-xs hidden-sm" id="sidebar" role="navigation">
+				<ul class="nav nav-list bs-docs-sidenav affix" data-spy="affix" data-offset-top="0" data-offset-bottom="0">
+					<div class="list-groups" id='objects'></div>
+				</ul>
+			</div>
+
+			<div class="col-md-9 main">
+				<div id='editor_holder'>
+					<div id="placeholder"></div>
+				</div>
+				<!-- <button id='submit'>Submit (console.log)</button> -->
+			</div>
+		</div>
+	</div>
+
+	<!-- Button trigger modal 
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button> -->
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">Settings</h4>
+				</div>
+				<div class="modal-body">
+					<div id="schemaedit"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button id="savesettings" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.hotkeys.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jsoneditor.min.js"></script>
+	<!--<script src="js/ace/ace.js"></script>-->
+	<script src="js/eventschema.js"></script>
+	<script src="js/objecteditor.js"></script>
+	<script>
+	</script>
+
+</body>
+
+</html>

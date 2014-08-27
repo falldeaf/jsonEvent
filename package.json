@@ -1,0 +1,27 @@
+{
+	"main": "index.html",
+	"name": "nw-demo",
+	"description": "Tiled file format object editor",
+	"version": "0.1.0",
+	"keywords": ["tiled", "object"],
+	"bugs": "falldeaf@gmail.com",
+	"maintainers": [{
+		"name": "falldeaf",
+		"email": "falldeaf@gmail.com",
+		"web": "http://falldeaf.com"
+	}],
+	"window": {
+		"icon": "icon.png",
+		"title": "Object Editor",
+		"toolbar": false,
+		"frame": true,
+		"width": 1000,
+		"height": 700,
+		"position": "mouse",
+		"min_width": 900,
+		"min_height": 200
+	},
+	"webkit": {
+		"plugin": true
+	}
+}
